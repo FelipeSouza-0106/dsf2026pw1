@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto Materialize</title>
+
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- CSS DO PROJETO -->
+    <style>
+
+        /* Estilo geral */
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Título principal */
+        h1 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Títulos das seções */
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Tabela */
+        #tabela {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        /* Formulário */
+        #formulario {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        /* Galeria */
+        #galeria {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Imagens do carrossel */
+        .carousel-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Modal */
+        .modal-content {
+            border-radius: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .carousel {
+                height: 250px;
+            }
+
+            .carousel-item {
+                width: 80%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE MENU
+         ========================= -->
+
+    <nav>
+        <div class="nav-wrapper">
+
+            <a href="#" class="brand-logo">
+                Meu Projeto
+            </a>
+
+            <ul id="nav-mobile"
+                class="right hide-on-med-and-down">
+
+                <li>
+                    <a href="#tabela">
+                        Tabela
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#formulario">
+                        Formulário
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#galeria">
+                        Galeria
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#modal1">
+                        Modal
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="container">
+
+        <h1 class="center-align">
+            Projeto Responsivo
+        </h1>
+
+        <p class="center-align">
+            Exemplo utilizando o framework Materialize.
+        </p>
+
+
+        <!-- =========================
+             TABELA
+             ========================= -->
+
+        <section id="tabela">
+
+            <h2>
+                Tabela
+            </h2>
+
+            <table class="striped responsive-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Nome</th>
+                        <th>Curso</th>
+                        <th>Nota</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Aluno 1</td>
+                        <td>Desenvolvimento de Sistemas</td>
+                        <td>9,0</td>
+                    </tr>
+
+                    <tr>
+                        <td>Aluno 2</td>
+                        <td>Desenvolvimento de Sistemas</td>
+                        <td>8,5</td>
+                    </tr>
+
+                    <tr>
+                        <td>Aluno 3</td>
+                        <td>Desenvolvimento de Sistemas</td>
+                        <td>10,0</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             FORMULÁRIO
+             ========================= -->
+
+        <section id="formulario">
+
+            <h2>
+                Formulário
+            </h2>
+
+            <div class="row">
+
+                <form class="col s12">
+
+                    <div class="input-field col s12 m6">
+
+                        <input id="nome"
+                            type="text">
+
+                        <label for="nome">
+                            Nome
+                        </label>
+
+                    </div>
+
+
+                    <div class="input-field col s12 m6">
+
+                        <input id="email"
+                            type="email">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                    </div>
+
+
+                    <div class="input-field col s12">
+
+                        <textarea id="mensagem"
+                            class="materialize-textarea"></textarea>
+
+                        <label for="mensagem">
+                            Mensagem
+                        </label>
+
+                    </div>
+
+
+                    <button type="button"
+                        class="btn waves-effect waves-light"
+                        onclick="enviarFormulario()">
+
+                        Enviar
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CARROSSEL / GALERIA
+             ========================= -->
+
+        <section id="galeria">
+
+            <h2>
+                Carrossel / Galeria
+            </h2>
+
+            <div class="carousel carousel-slider center">
+
+                <a class="carousel-item"
+                    href="#one!">
+
+                    <img src="https://picsum.photos/800/400?random=1"
+                        alt="Imagem 1">
+
+                </a>
+
+
+                <a class="carousel-item"
+                    href="#two!">
+
+                    <img src="https://picsum.photos/800/400?random=2"
+                        alt="Imagem 2">
+
+                </a>
+
+
+                <a class="carousel-item"
+                    href="#three!">
+
+                    <img src="https://picsum.photos/800/400?random=3"
+                        alt="Imagem 3">
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MODAL
+             ========================= -->
+
+        <section>
+
+            <h2>
+                Modal
+            </h2>
+
+            <a class="waves-effect waves-light btn modal-trigger"
+                href="#modal1">
+
+                Abrir Modal
+
+            </a>
+
+        </section>
+
+
+        <!-- JANELA DO MODAL -->
+
+        <div id="modal1"
+            class="modal">
+
+            <div class="modal-content">
+
+                <h4>
+                    Exemplo de Modal
+                </h4>
+
+                <p>
+                    Este modal foi criado utilizando
+                    o framework Materialize.
+                </p>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <a href="#!"
+                    class="modal-close waves-effect waves-green btn-flat">
+
+                    Fechar
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         MATERIALIZE JAVASCRIPT
+         ========================= -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+
+
+    <!-- =========================
+         JAVASCRIPT DO PROJETO
+         ========================= -->
+
+    <script>
+
+        // Inicialização dos componentes
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Inicializa os modais
+            var modais =
+                document.querySelectorAll('.modal');
+
+            M.Modal.init(modais);
+
+
+            // Inicializa o carrossel
+            var carrosseis =
+                document.querySelectorAll('.carousel');
+
+            M.Carousel.init(carrosseis, {
+
+                fullWidth: true,
+                indicators: true
+
+            });
+
+        });
+
+
+        // Função do formulário
+        function enviarFormulario() {
+
+            let nome =
+                document.getElementById("nome").value;
+
+            let email =
+                document.getElementById("email").value;
+
+
+            if (nome === "" || email === "") {
+
+                alert("Preencha o nome e o e-mail!");
+
+            } else {
+
+                alert("Formulário enviado com sucesso!");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
